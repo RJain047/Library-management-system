@@ -1,7 +1,70 @@
 # Library-management-system
 Languages used Python -Flask and MSQL 
-The application connects with Mysql database whicb is created using librarydatabase.sql.
+The application connects with Mysql database which is created using librarydatabase.sql.
 app.py contains the python code . Post executing the code the site is available at localhost ip address 127.0.0.1.
+
+Functionalities performed are as follows -
+
+A.	Select – the search form performs the function of selecting available books in the inventory. The form allows the user to enter a book name or author name or all for searching for all available books in the inventory. Use http://127.0.0.1:5000/search to explore this functionality.
+
+
+
+ 
+There are 2 sql queries that get executed depending on user input.
+
+A.1 Selecting book using book name or author name where %s is author name or book name
+SELECT Book_name,Book_author from library.book_inventory WHERE Book_name LIKE %s OR Book_author LIKE %s 
+
+Search by book name
+ 
+
+Search by author name
+ 
+
+
+
+A.2For selecting all books in the inventory,
+SELECT Book_name,Book_author from library.book_inventory
+
+ 
+
+
+B.	Update – the update form performs the function of updating the book details i.e. book name and author name and year of publication. This form navigates to a edit page post entering the author name , book name or all if all the books need to be  viewed for updating. Use http://127.0.0.1:5000/update to explore this option.
+The sql queries executed for this areas shown below where -
+SELECT * from library.book_inventory WHERE Book_name LIKE %s OR Book_author LIKE %s"
+SELECT * from library.book_inventory
+SELECT * from library.book_inventory WHERE Book_id = %s
+UPDATE book_inventory set Book_author=%s,Book_name=%s,year_of_publication=%s where Book_id=%s
+
+
+Forms used for update-for searching the book that needs to be updated.
+ 
+After entering all in the search box-
+
+ 
+
+After clicking edit corresponding to the book.
+
+ 
+
+Enter new values and click update.
+
+
+
+C.	Delete – this function allows the library staff to delete a book from the book inventory. In case of a missing book the library no longer keeps the information in the system. On the form enter the book name or author name and select the corresponding option from the drop down and click delete. Use http://127.0.0.1:5000/delete to explore this option
+
+Following 2 commands delete the bok by book name or author %s is for the book name that is to be deleted . 
+DELETE FROM book_inventory WHERE Book_author = %s
+
+DELETE FROM book_inventory WHERE Book_name = %s
+ 
+D.	Insert – this form allows the user to insert  a book in the book inventory table.the page takes 3 inputs from the user book name , author and year of publication. Queries used for this page is where uuid is a random generator for ISBN number and % s are the name of the books ,author and year of publication.
+   
+INSERT INTO book_inventory (category_id,Book_author,Book_name,year_of_publication,ISBN,available_ind) Values (5,%s, %s,%s,uuid(),1)
+ 
+            
+
+
 
 
 
