@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+
+{% block title %}Search{% endblock %}
+
+{% block content %}
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="/static/index.css">
+    </head>
+    
+<h2>Insert Page</h2>
+    <body>
+        <center>  <form class="example" method="post" action="" style="margin-top:100px;margin-bottom:20px;max-width:600px">
+            <input type="text" placeholder="Enter the Book" name="book" required>
+            <input type="text" placeholder="Enter the Author" name="author" required>
+            <input type="tel" placeholder="Enter Publication Year" name="year" pattern="\d{4}" minlength="4" maxlength="4" required>
+		    </br>
+            <button type="submit" style="float:right;margin-top:50px; margin-right:300px;" <i>Insert</i></button>
+            <div class="msg">{{ msg }}</div>
+        </form></center>  
+    </body>
+ {% endblock %}

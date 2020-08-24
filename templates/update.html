@@ -1,0 +1,29 @@
+{% extends 'layout.html' %}
+
+{% block title %}Search{% endblock %}
+
+{% block content %}
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/static/index.css">
+</head>
+
+<h2>Search Page</h2>
+    <body>
+      <center> <form class="example" method="post" action="" 
+         style="margin-top:100px;margin-bottom:20px;max-width:600px">
+            <input type="text" placeholder="Search by author or book or all to see all the data" name="book">
+            <button type="submit">Search     <i class="fa fa-search"></i></button>
+
+        </form><center>
+        {% for item in data %}
+            <tr>
+                <td>{{item['Book_name']}} by {{item['Book_author']}} <a href="/edit?id={{item['Book_id']}}">Edit</a></td>
+                </br>
+            </tr>
+        {% endfor %}
+        </center>
+    </body>
+ {% endblock %}

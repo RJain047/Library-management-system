@@ -1,0 +1,65 @@
+{% extends 'layout.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<h2>Home Page</h2>
+<p>Welcome back, {{ username }}!</p>
+<table class="iconTable">
+    <tr>
+        <td>
+           <th>
+            <div class="imgContainer">
+                <div>
+                    <img src="/static/books.png" width="100px" height="100px"/>
+                </div>
+                <div class="imgButton">
+                    <input type="submit" value="Search Books"  
+                    onclick="window.location='/search';" />  
+                 </div>
+            </div>
+          </th>
+        </td>
+    
+        <td>
+            <th>
+                <div class="imgContainer">
+                    <div>
+                    <img src="/static/add.png" width="100px" height="100px"/>
+                    </div>
+                    <div class="imgButton">
+                        <input type="submit" value="Add Books"  
+                        onclick="window.location='/insert';" />  
+                    </div>
+                </div>
+            </th>   
+        </td>
+        <td>
+            <th>
+                <div class="imgContainer">
+                    <div>
+                    <img src="/static/delete.png" width="100px" height="100px"/>
+                    </div>
+                    <div class="imgButton">
+                        <input type="submit" value="Delete Books"  
+                        onclick="window.location='/delete';" />  
+                    </div>
+                </div>
+            </th>   
+        </td>
+        <td>
+            <th>
+                <div class="imgContainer">
+                    <div>
+                    <img src="/static/update.png" width="100px" height="100px"/>
+                    </div>
+                    <div class="imgButton">
+                        <input type="submit" value="Update Books"  
+                        onclick="window.location='/update';" />  
+                    </div>
+                </div>
+            </th>   
+        </td>
+    </tr>
+</table>
+{% endblock %}

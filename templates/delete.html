@@ -1,0 +1,28 @@
+{% extends 'layout.html' %}
+
+{% block title %}Delete{% endblock %}
+
+{% block content %}
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="/static/index.css">
+    </head>
+    
+<h2>Delete Page</h2>
+    <body>
+        <center>  
+            <form class="example" method="post" action="" style="margin-top:100px;margin-bottom:20px;max-width:600px">
+            <input type="text" placeholder="Enter the Book or Author's name to delete" name="name" required>
+            <select name="selectType">
+                <option value="" disabled selected>Select your option</option>
+                <option value="Author">Author</option>
+                <option value="Book">Book</option>
+            </select>
+            </select>
+		    </br>
+            <button type="submit" style="float:right;margin-top:50px; margin-right:300px;" <i>Delete</i></button>
+            <div class="msg">{{ msg }}</div>
+        </form></center>  
+    </body>
+ {% endblock %}
