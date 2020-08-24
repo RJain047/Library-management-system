@@ -6,7 +6,7 @@ App.py contains the python code.
 The application connects with Mysql database which is created using librarydatabase.sql.
 Post executing the code the site is available at localhost ip address 127.0.0.1
 
-
+##Functionalities are as follows
 A.	Select – the search form performs the function of selecting available books in the inventory. The form allows the user to enter a book name or author name or all for searching for all available books in the inventory. Use http://127.0.0.1:5000/search to explore this functionality.
 
 
