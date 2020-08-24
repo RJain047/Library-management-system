@@ -1,9 +1,9 @@
 # Library-management-system
-Languages used Python -Flask and MSQL 
+Info-
+App.py contains the python code.
 The application connects with Mysql database which is created using librarydatabase.sql.
-app.py contains the python code . Post executing the code the site is available at localhost ip address 127.0.0.1.
+Post executing the code the site is available at localhost ip address 127.0.0.1
 
-Functionalities performed are as follows -
 
 A.	Select – the search form performs the function of selecting available books in the inventory. The form allows the user to enter a book name or author name or all for searching for all available books in the inventory. Use http://127.0.0.1:5000/search to explore this functionality.
 
@@ -63,9 +63,4 @@ D.	Insert – this form allows the user to insert  a book in the book inventory 
 INSERT INTO book_inventory (category_id,Book_author,Book_name,year_of_publication,ISBN,available_ind) Values (5,%s, %s,%s,uuid(),1)
  
             
-
-
-
-
-
 
